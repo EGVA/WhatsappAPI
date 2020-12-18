@@ -1,6 +1,8 @@
 import 'package:WppAPI/controllers/home_controller.dart';
 import 'package:flutter/material.dart';
 
+import '../app_localizations.dart';
+
 // ignore: must_be_immutable
 class HomeTextFieldInputs extends StatelessWidget {
   @override
@@ -13,8 +15,9 @@ class HomeTextFieldInputs extends StatelessWidget {
               HomeController.instance.cellphone = value;
               HomeController.instance.callNotifyListeners();
             },
+            keyboardType: TextInputType.number,
             decoration: InputDecoration(
-                border: OutlineInputBorder(), labelText: 'Número'),
+                border: OutlineInputBorder(), labelText: AppLocalizations.of(context).translate('Cellphone')),
           ),
           SizedBox(height: 10),
           TextField(
@@ -23,7 +26,7 @@ class HomeTextFieldInputs extends StatelessWidget {
               HomeController.instance.callNotifyListeners();
             },
             decoration: InputDecoration(
-                border: OutlineInputBorder(), labelText: 'Mensagem'),
+                border: OutlineInputBorder(), labelText: AppLocalizations.of(context).translate('Message')),
           ),
         ],
       ),

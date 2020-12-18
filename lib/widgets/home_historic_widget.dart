@@ -1,3 +1,4 @@
+import 'package:WppAPI/app_localizations.dart';
 import 'package:WppAPI/controllers/home_controller.dart';
 import 'package:WppAPI/models/messages_model.dart';
 import 'package:flutter/material.dart';
@@ -17,14 +18,14 @@ class HistoricCard extends StatelessWidget {
                   HomeController.customCopyURL(_message, _cellphone);
                   Navigator.of(context).pop();
                 },
-                child: Text('Copy'),
+                child: Text(AppLocalizations.of(context).translate('Copy')),
               ),
               TextButton(
                 onPressed: () {
                   HomeController.customOpenURL(_message, _cellphone);
                   Navigator.of(context).pop();
                 },
-                child: Text('Open in Browser'),
+                child: Text(AppLocalizations.of(context).translate('OpenInBrowser')),
               ),
             ],
           ));
