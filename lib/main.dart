@@ -3,8 +3,11 @@ import './views/home_view.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'app_localizations.dart';
+import 'package:admob_flutter/admob_flutter.dart';
 
 main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Admob.initialize(testDeviceIds: ['LGM70074dde74']);
   runApp(App());
 }
 
