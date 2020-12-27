@@ -25,7 +25,8 @@ class HistoricCard extends StatelessWidget {
                   HomeController.customOpenURL(_message, _cellphone);
                   Navigator.of(context).pop();
                 },
-                child: Text(AppLocalizations.of(context).translate('OpenInBrowser')),
+                child: Text(
+                    AppLocalizations.of(context).translate('OpenInBrowser')),
               ),
             ],
           ));
@@ -38,25 +39,37 @@ class HistoricCard extends StatelessWidget {
       child: Container(
         clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10), color: Colors.green[200]),
+            borderRadius: BorderRadius.circular(10), color: Colors.green[300]),
         child: Center(
             child: ListView.builder(
           itemCount: HomeController.instance.savedMessages.length,
           itemBuilder: (BuildContext ctxt, int index) {
-            List<SavedMessage> reversedList = HomeController.instance.savedMessages.reversed.toList(); 
+            List<SavedMessage> reversedList =
+                HomeController.instance.savedMessages.reversed.toList();
             return OutlinedButton(
               onPressed: () {
-                savedMessageOptions(
-                    context,
-                    reversedList[index].message,
+                savedMessageOptions(context, reversedList[index].message,
                     reversedList[index].cellphone);
               },
               child: ListTile(
                 onTap: null,
-                title:
-                    Text(reversedList[index].message),
-                subtitle: Text(
-                    reversedList[index].cellphone),
+                title: Text(reversedList[index].message),
+                subtitle: Text(reversedList[index].cellphone),
+                trailing: Ink(
+                  decoration: const ShapeDecoration(
+                    color: Colors.lightBlue,
+                    shape: CircleBorder(),
+                  ),
+                  child: IconButton(
+                    icon:
+                        Icon(Icons.remove_circle_outline, color: Colors.white),
+                    onPressed: () {
+                      HomeController.instance.removeMessage(
+                          reversedList[index].message,
+                          reversedList[index].cellphone);
+                    },
+                  ),
+                ),
               ),
             );
           },

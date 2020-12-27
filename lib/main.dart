@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import './views/home_view.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
 import 'app_localizations.dart';
 
 main() {

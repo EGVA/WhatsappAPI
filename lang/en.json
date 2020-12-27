@@ -2,5 +2,7 @@
     "Cellphone": "Cellphone",
     "Message": "Message",
     "Copy": "Copy",
-    "OpenInBrowser": "Open in Browser"
+    "OpenInBrowser": "Open in Browser",
+    "MessagePreview": "Message Preview",
+    "MessageHistory": "Message History"
 }

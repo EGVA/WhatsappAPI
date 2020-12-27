@@ -2,5 +2,7 @@
     "Cellphone": "電話の番号",
     "Message": "メッセージ",
     "Copy": "写す",
-    "OpenInBrowser": "ブラウザで開く"
+    "OpenInBrowser": "ブラウザで開く",
+    "MessagePreview": "メッセージプレビュー",
+    "MessageHistory": "メッセージ履歴"
 }

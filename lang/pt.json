@@ -2,5 +2,7 @@
     "Cellphone": "Número",
     "Message": "Mensagem",
     "Copy": "Copiar",
-    "OpenInBrowser": "Abrir no Navegador"
+    "OpenInBrowser": "Abrir no Navegador",
+    "MessagePreview": "Pré-Visualização da Mensagem",
+    "MessageHistory": "Histórico de Mensagens"
 }
