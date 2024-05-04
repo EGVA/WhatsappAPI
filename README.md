@@ -1,3 +1,3 @@
 # WppAPI
 
-Aplicação feita em Flutter para a criação de links de mensagem para o whatsapp.
+Aplicação feita em Flutter para a criação de link para, criar uma conversa no whatsapp sem necessariamente adicionar o contato.
